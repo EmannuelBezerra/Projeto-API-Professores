@@ -60,38 +60,6 @@ const cadastrarProfessores = async (req, res) => {
 
 }
 
-//Criar novo Professor
-/*const cadastrarProfessor = async (req, res) => {
-
-    //Captura dados do corpo da requisição
-    const {nome, disciplina, email, salario} = req.body
-
-    //Validação dos dados
-    if(!nome || !disciplina || !email || !salario){
-        return res.status(400).json({
-            //Retorno do erro
-            mensagem:'Todos os campos são obrigatórios'
-        })
-    }
-
-    //Criação do objeto Professor
-    const professor = {
-        nome,
-        disciplina,
-        email,
-        salario
-    }
-
-    //Salvamento do professor no banco
-    const id = await professorModel.cadastrarProfessor(professor)
-
-    //Mesagem de confirmação de sucesso
-    res.status(201).json({
-        mensagem: 'Professor cadastrado com sucesso',
-        id
-    })
-}*/
-
 //Atualizar Professor
 const atualizarProfessor = async (req, res) => {
     //Captura ID
@@ -135,7 +103,6 @@ const deletarProfessorPorId = async (req, res) => {
 module.exports = {
     listarProfessores,
     buscarProfessoresPorID,
-    //cadastrarProfessor,
     cadastrarProfessores,
     atualizarProfessor,
     deletarProfessorPorId
